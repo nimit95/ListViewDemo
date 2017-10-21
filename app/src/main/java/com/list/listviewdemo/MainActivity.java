@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         ListView lvCourseNames = (ListView) findViewById(R.id.lv_names);
 
-        ListAdapter listAdapter = new ListAdapter(getCourseList());
+        ListAdapter listAdapter = new ListAdapter(MainActivity.this, getCourseList());
 
         lvCourseNames.setAdapter(listAdapter);
     }
@@ -81,48 +81,5 @@ public class MainActivity extends AppCompatActivity {
         return courseArrayList;
     }
 
-    class ListAdapter extends BaseAdapter {
 
-        ArrayList<Course> courseList;
-
-        public ListAdapter(ArrayList<Course> courseList) {
-            this.courseList = courseList;
-        }
-
-        @Override
-        public int getCount() {
-            return courseList.size();
-        }
-
-        @Override
-        public View getView(int position, View view, ViewGroup parent) {
-
-
-            if(view == null) {
-                view = getLayoutInflater().inflate(R.layout.list_item, null, false);
-            }
-            String courseName = courseList.get(position).getName();
-            String instructorName = courseList.get(position).getInstructor();
-            int batchStrength = courseList.get(position).getBatchStrength();
-
-
-            ((TextView)view.findViewById(R.id.tvCourseName)).setText(courseName);
-            ((TextView)view.findViewById(R.id.tvInstName)).setText(instructorName);
-            ((TextView)view.findViewById(R.id.tvBatchStrength)).setText(String.valueOf(batchStrength));
-
-
-            return view;
-        }
-
-
-        @Override
-        public Object getItem(int position) {
-            return null;
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return 0;
-        }
-    }
 }
