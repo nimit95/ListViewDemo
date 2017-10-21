@@ -36,6 +36,48 @@ public class MainActivity extends AppCompatActivity {
         courseArrayList.add(new Course("Crux", "Sumit", 60));
         courseArrayList.add(new Course("Launchpad", "Prateek", 60));
 
+        courseArrayList.add(new Course("Pandora", "Arnav", 60));
+        courseArrayList.add(new Course("Elixer", "Arnav", 50));
+        courseArrayList.add(new Course("Crux", "Sumit", 60));
+        courseArrayList.add(new Course("Launchpad", "Prateek", 60));
+
+        courseArrayList.add(new Course("Pandora", "Arnav", 60));
+        courseArrayList.add(new Course("Elixer", "Arnav", 50));
+        courseArrayList.add(new Course("Crux", "Sumit", 60));
+        courseArrayList.add(new Course("Launchpad", "Prateek", 60));
+
+        courseArrayList.add(new Course("Pandora", "Arnav", 60));
+        courseArrayList.add(new Course("Elixer", "Arnav", 50));
+        courseArrayList.add(new Course("Crux", "Sumit", 60));
+        courseArrayList.add(new Course("Launchpad", "Prateek", 60));
+
+        courseArrayList.add(new Course("Pandora", "Arnav", 60));
+        courseArrayList.add(new Course("Elixer", "Arnav", 50));
+        courseArrayList.add(new Course("Crux", "Sumit", 60));
+        courseArrayList.add(new Course("Launchpad", "Prateek", 60));
+
+        courseArrayList.add(new Course("Pandora", "Arnav", 60));
+        courseArrayList.add(new Course("Elixer", "Arnav", 50));
+        courseArrayList.add(new Course("Crux", "Sumit", 60));
+        courseArrayList.add(new Course("Launchpad", "Prateek", 60));
+
+        courseArrayList.add(new Course("Pandora", "Arnav", 60));
+        courseArrayList.add(new Course("Elixer", "Arnav", 50));
+        courseArrayList.add(new Course("Crux", "Sumit", 60));
+        courseArrayList.add(new Course("Launchpad", "Prateek", 60));
+
+        courseArrayList.add(new Course("Pandora", "Arnav", 60));
+        courseArrayList.add(new Course("Elixer", "Arnav", 50));
+        courseArrayList.add(new Course("Crux", "Sumit", 60));
+        courseArrayList.add(new Course("Launchpad", "Prateek", 60));
+
+        courseArrayList.add(new Course("Pandora", "Arnav", 60));
+        courseArrayList.add(new Course("Elixer", "Arnav", 50));
+        courseArrayList.add(new Course("Crux", "Sumit", 60));
+        courseArrayList.add(new Course("Launchpad", "Prateek", 60));
+
+
+
         return courseArrayList;
     }
 
@@ -53,9 +95,12 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            View view = getLayoutInflater().inflate(R.layout.list_item, null, false);
+        public View getView(int position, View view, ViewGroup parent) {
 
+
+            if(view == null) {
+                view = getLayoutInflater().inflate(R.layout.list_item, null, false);
+            }
             String courseName = courseList.get(position).getName();
             String instructorName = courseList.get(position).getInstructor();
             int batchStrength = courseList.get(position).getBatchStrength();
